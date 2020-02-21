@@ -15,14 +15,14 @@ $sdkFiles = new \RecursiveIteratorIterator(
     new \RecursiveDirectoryIterator(realpath('src'))
 );
 
-$burgomaster->recursiveCopy('src', 'DTS/eBaySDK', ['php'], $sdkFiles);
+$burgomaster->recursiveCopy('src', 'nekhbet/eBaySDK', ['php'], $sdkFiles);
 $burgomaster->recursiveCopy('vendor/guzzlehttp/guzzle/src', 'GuzzleHttp');
 $burgomaster->recursiveCopy('vendor/guzzlehttp/psr7/src', 'GuzzleHttp/Psr7');
 $burgomaster->recursiveCopy('vendor/guzzlehttp/promises/src', 'GuzzleHttp/Promise');
 $burgomaster->recursiveCopy('vendor/psr/http-message/src', 'Psr/Http/Message');
 
 $burgomaster->createAutoloader([
-    'DTS/eBaySDK/functions.php',
+    'nekhbet/eBaySDK/functions.php',
     'GuzzleHttp/functions.php',
     'GuzzleHttp/Psr7/functions.php',
     'GuzzleHttp/Promise/functions.php',
